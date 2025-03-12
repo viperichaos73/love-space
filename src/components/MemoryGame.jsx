@@ -109,16 +109,22 @@ const MemoryGame = ({ setCurrentPage }) => {
             >
               <Card
                 onClick={() => handleCardClick(uniqueId)}
+                onTouchStart={(e) => {
+                  e.preventDefault();
+                  handleCardClick(uniqueId);
+                }}
                 style={{
                   cursor: 'pointer',
-                  height: 100,
+                  height: '100%',
+                  aspectRatio: '1',
                   display: 'flex',
                   justifyContent: 'center',
                   alignItems: 'center',
                   background: flipped.includes(uniqueId) || matched.includes(uniqueId)
                     ? '#fff'
                     : 'var(--primary-color)',
-                  transition: 'all 0.3s ease'
+                  transition: 'all 0.3s ease',
+                  touchAction: 'manipulation'
                 }}
                 bodyStyle={{
                   padding: 0,

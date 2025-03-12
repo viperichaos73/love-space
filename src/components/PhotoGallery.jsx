@@ -5,12 +5,12 @@ import { Image, Row, Col } from 'antd';
 const PhotoGallery = ({ setCurrentPage }) => {
   // 示例照片数组，实际使用时请替换为真实的照片URL
   const photos = [
-    { id: 1, url: 'https://picsum.photos/300/400', description: '我们的第一张合照' },
-    { id: 2, url: 'https://picsum.photos/300/400', description: '甜蜜的约会' },
-    { id: 3, url: 'https://picsum.photos/300/400', description: '浪漫的晚餐' },
-    { id: 4, url: 'https://picsum.photos/300/400', description: '开心的旅行' },
-    { id: 5, url: 'https://picsum.photos/300/400', description: '难忘的时刻' },
-    { id: 6, url: 'https://picsum.photos/300/400', description: '美好的回忆' },
+    { id: 1, url: '/images/photo1.jpg', description: '我们的第一张合照' },
+    { id: 2, url: '/images/photo2.jpg', description: '甜蜜的约会' },
+    { id: 3, url: '/images/photo3.jpg', description: '浪漫的晚餐' },
+    { id: 4, url: '/images/photo4.jpg', description: '开心的旅行' },
+    { id: 5, url: '/images/photo5.jpg', description: '难忘的时刻' },
+    { id: 6, url: '/images/photo6.jpg', description: '美好的回忆' },
   ];
 
   return (
@@ -39,6 +39,8 @@ const PhotoGallery = ({ setCurrentPage }) => {
                 src={photo.url}
                 alt={photo.description}
                 style={{ width: '100%', height: 'auto', borderRadius: '8px' }}
+                loading="lazy"
+                placeholder={<div style={{ background: '#f0f0f0', height: 200, borderRadius: '8px' }} />}
               />
               <motion.p
                 initial={{ opacity: 0 }}
