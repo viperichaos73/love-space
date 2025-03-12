@@ -109,10 +109,6 @@ const MemoryGame = ({ setCurrentPage }) => {
             >
               <Card
                 onClick={() => handleCardClick(uniqueId)}
-                onTouchStart={(e) => {
-                  e.preventDefault();
-                  handleCardClick(uniqueId);
-                }}
                 style={{
                   cursor: 'pointer',
                   height: '100%',
@@ -124,7 +120,9 @@ const MemoryGame = ({ setCurrentPage }) => {
                     ? '#fff'
                     : 'var(--primary-color)',
                   transition: 'all 0.3s ease',
-                  touchAction: 'manipulation'
+                  touchAction: 'none',
+                  WebkitTapHighlightColor: 'transparent',
+                  userSelect: 'none'
                 }}
                 bodyStyle={{
                   padding: 0,
@@ -132,16 +130,18 @@ const MemoryGame = ({ setCurrentPage }) => {
                   height: '100%',
                   display: 'flex',
                   justifyContent: 'center',
-                  alignItems: 'center'
+                  alignItems: 'center',
+                  fontSize: '2rem'
                 }}
               >
                 <div
                   style={{
-                    fontSize: 36,
+                    fontSize: '2rem',
                     color: flipped.includes(uniqueId) || matched.includes(uniqueId)
                       ? 'var(--primary-color)'
-                      : 'transparent',
-                    transition: 'all 0.3s ease'
+                      : '#fff',
+                    transition: 'all 0.3s ease',
+                    pointerEvents: 'none'
                   }}
                 >
                   {flipped.includes(uniqueId) || matched.includes(uniqueId) ? content : <HeartFilled />}
