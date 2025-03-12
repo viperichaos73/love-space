@@ -5,15 +5,9 @@ import { Image, Row, Col } from 'antd';
 const PhotoGallery = ({ setCurrentPage }) => {
   // 示例照片数组，实际使用时请替换为真实的照片URL
   const photos = [
-    { id: 1, url: '/images/photo1.jpg', description: '我们的第一张合照' },
-    { id: 2, url: '/images/photo2.jpg', description: '甜蜜的约会' },
-    { id: 3, url: '/images/photo3.jpg', description: '浪漫的晚餐' },
-    { id: 4, url: '/images/photo4.jpg', description: '开心的旅行' },
-    { id: 5, url: '/images/photo5.jpg', description: '难忘的时刻' },
-    { id: 6, url: '/images/photo6.jpg', description: '美好的回忆' },
-    { id: 7, url: '/images/hands.jpg', description: '十指相扣的温暖时刻' },
-    { id: 8, url: '/images/selfie.jpg', description: '可爱的自拍时刻' },
-    { id: 9, url: '/images/ar_effects.jpg', description: '创意AR特效的浪漫夜晚' },
+    { id: 1, url: '/images/1.jpg', description: '我们的第一张合照' },
+    { id: 2, url: '/images/2.jpg', description: '甜蜜的约会' },
+    { id: 3, url: '/images/3.jpg', description: '浪漫的晚餐' }
   ];
 
   return (
