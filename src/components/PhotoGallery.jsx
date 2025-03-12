@@ -38,6 +38,11 @@ const PhotoGallery = ({ setCurrentPage }) => {
                 style={{ width: '100%', height: 'auto', borderRadius: '8px' }}
                 loading="lazy"
                 placeholder={<div style={{ background: '#f0f0f0', height: 200, borderRadius: '8px' }} />}
+                onError={(e) => {
+                  e.target.onerror = null;
+                  e.target.src = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgZmlsbD0iI2U5MWU2MyIgY2xhc3M9ImJpIGJpLWltYWdlIiB2aWV3Qm94PSIwIDAgMTYgMTYiPjxwYXRoIGQ9Ik02LjAwMiA1LjVhMS41IDEuNSAwIDEgMS0zIDAgMS41IDEuNSAwIDAgMSAzIDB6Ii8+PHBhdGggZD0iTTEuNSAyQTEuNSAxLjUgMCAwIDAgMCAzLjV2OUExLjUgMS41IDAgMCAwIDEuNSAxNGgxM2ExLjUgMS41IDAgMCAwIDEuNS0xLjV2LTlBMS41IDEuNSAwIDAgMCAxNC41IDJoLTEzek0xNCA0LjV2Ny42bC0zLjc2LTMuNzZhLjUuNSAwIDAgMC0uNzA3IDBMMi41IDEzLjVWNC41YS41LjUgMCAwIDEgLjUtLjVoMTBhLjUuNSAwIDAgMSAuNS41eiIvPjwvc3ZnPg==';
+                  message.error(`图片加载失败: ${photo.description}`);
+                }}
               />
               <motion.p
                 initial={{ opacity: 0 }}
