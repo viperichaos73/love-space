@@ -11,6 +11,9 @@ const PhotoGallery = ({ setCurrentPage }) => {
     { id: 4, url: '/images/photo4.jpg', description: '开心的旅行' },
     { id: 5, url: '/images/photo5.jpg', description: '难忘的时刻' },
     { id: 6, url: '/images/photo6.jpg', description: '美好的回忆' },
+    { id: 7, url: '/images/hands.jpg', description: '十指相扣的温暖时刻' },
+    { id: 8, url: '/images/selfie.jpg', description: '可爱的自拍时刻' },
+    { id: 9, url: '/images/ar_effects.jpg', description: '创意AR特效的浪漫夜晚' },
   ];
 
   return (
